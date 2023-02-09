@@ -1,0 +1,18 @@
+---
+import { SOCIAL_GITHUB, SOCIAL_LINKEDIN, SOCIAL_MASTODON } from 'src/constants'
+import Link from './Link.astro'
+---
+
+<footer class='shrink-0 flex flex-col justify-center items-center'>
+    <div class='flex gap-6'>
+        <Link href={SOCIAL_GITHUB}>GitHub</Link>
+        <Link href={SOCIAL_MASTODON}>Mastodon</Link>
+        <Link href={SOCIAL_LINKEDIN}>LinkedIn</Link>
+    </div>
+    <div class='py-4'>
+        &copy; {new Date().getFullYear()} Matthias Heisterkamp using
+        <a href='https://astro.build/'>
+            <img src='./astro-logo.svg' alt='astro-logo' class='inline w-4' /> Astro</a
+        >
+    </div>
+</footer>

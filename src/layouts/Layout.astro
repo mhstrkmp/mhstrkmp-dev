@@ -1,0 +1,17 @@
+---
+import BaseHead from '@components/BaseHead.astro'
+import Footer from '@components/Footer.astro'
+import Header from '@components/Header.astro'
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <BaseHead />
+    </head>
+    <body class='bg-[#081229] text-neutral-50 flex flex-col min-h-screen scroll-smooth'>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>

@@ -1,15 +1,32 @@
 {
-	"name": "mhstrkmp-dev",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"astro": "^2.0.10"
-	}
+    "name": "mhstrkmp-dev",
+    "type": "module",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"netlify dev\" \" tsc --watch\"",
+        "dev:live": "netlify dev --live",
+        "build": "netlify build",
+        "preview": "netlify build --context deploy-preview",
+        "validate": "tsc --noEmit && astro check",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/partytown": "^1.0.3",
+        "@astrojs/sitemap": "^1.0.1",
+        "@astrojs/tailwind": "^3.0.1",
+        "astro": "^2.0.12",
+        "tailwindcss": "^3.2.6"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.4.3",
+        "@commitlint/config-conventional": "^17.4.3",
+        "@types/node": "^18.13.0",
+        "concurrently": "^7.6.0",
+        "husky": "^8.0.3",
+        "netlify-cli": "^12.12.0",
+        "prettier": "^2.8.4",
+        "prettier-plugin-astro": "^0.8.0",
+        "typescript": "^4.9.5"
+    }
 }
